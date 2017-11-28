@@ -44,3 +44,9 @@ on boot
 
     # Camera/Libals
     chown media input /dev/input/event11
+
+on property:bl.map.mode=lin
+    write /sys/bus/i2c/devices/0-0036/bl_map_mode lin
+
+on property:bl.map.mode=exp
+    write /sys/bus/i2c/devices/0-0036/bl_map_mode exp
